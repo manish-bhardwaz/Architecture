@@ -12,7 +12,8 @@ import (
 )
 
 var tpl = template.Must(template.ParseFiles("index.html"))
-var apiKey *string
+
+const port = ":8080"
 
 // Page represents the page
 type Page struct {
@@ -60,7 +61,6 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	c := make(chan os.Signal)
-	port := ":8080"
 	mux := http.NewServeMux()
 
 	s := http.Server{
