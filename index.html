@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="web/style/index.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ .Title }}</title>
+    <meta name="keywords" content="Manoj Sharma, Manish Sharma, Architecture" />
+</head>
+
+<div id="header" class="app-header">
+    <div class="pull-left cursor">
+        <h1>{{ .Title }}</h1>
+    </div>
+    <div class="pull-right">
+        <a href="#contact" class="button button-contact">Contact</a>
+    </div>
+</div>
+
+<body onresize="viewChanged()">
+    <div class="slider">
+        <div id="app-slider" class="slider">
+
+            {{ range .Slides }}
+            <div class="slider-item">
+                <img src="{{ .URL }}">
+            </div>
+            {{ end }}
+
+            <button class="prev">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" /></svg>
+			</button>
+            <button class="next">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" /></svg>
+			</button>
+
+            <!-- <img class="background" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABfCAYAAADWH0qpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABBdEVYdERlc2NyaXB0aW9uADRrIHdhbGxwYXBlciBMb3ZlbHkgNGsgbWluaW1hbGlzdCB3YWxscGFwZXIgNjcgaW1hZ2VznMvVCQAAABl0RVh0Q29weXJpZ2h0ADRyZWNlbnRjYXJzLmNvbdzHkxgAAABBdEVYdENvbW1lbnQAQ1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gOTAKfVTa3QAAATFJREFUeF7t08EJwDAAAzGn++/c5tElDiQwnuDOtvcOCHr+B4IEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwJC1fQ6sAb3QNcqwAAAAAElFTkSuQmCC"> -->
+
+            <span class="switch">
+			</span>
+        </div>
+    </div>
+
+    <div id="about" class="app-contact">
+        <div class="app-about-holder">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget turpis bibendum lacus dapibus bibendum ac at dolor. In dapibus ipsum a lobortis fermentum. Nullam aliquet justo felis, eget elementum ipsum laoreet at. Aliquam ultrices nisi in tellus
+                cursus sagittis. Duis elit est, feugiat tincidunt pharetra quis, pharetra vel nulla. Mauris maximus, eros congue consequat iaculis, dolor ante placerat velit, sed ullamcorper neque est in ligula. Nam convallis arcu in quam commodo tincidunt.
+                Sed vel mollis libero. Duis iaculis aliquam rhoncus. Nunc eget mollis mauris. Aenean gravida sagittis neque, sit amet varius quam ornare nec. Vivamus consequat bibendum elementum. Praesent interdum placerat lobortis. Donec non cursus mi.
+                Nullam quis nunc dignissim, tincidunt nibh a, consectetur nunc. Praesent tristique, lectus id euismod hendrerit, arcu justo vulputate ligula, non facilisis mi velit sit amet augue. Ut lectus urna, maximus at eleifend vel, laoreet condimentum
+                lacus. Donec vitae ante eget felis aliquam fringilla quis eu nulla. Curabitur eget odio lectus. Maecenas nec lacus felis. In lobortis orci quis urna aliquet convallis. Phasellus laoreet malesuada urna, et gravida massa elementum porta.
+                Quisque pharetra placerat imperdiet. Nulla facilisi. Suspendisse mattis facilisis nunc, ac convallis odio interdum ut. Pellentesque lacus mi, facilisis sed risus id, posuere fringilla sem. In lacinia, tellus a facilisis gravida, libero
+                libero mattis nibh, vitae tincidunt sapien nulla eu libero. Vestibulum cursus metus eu volutpat sagittis.
+            </p>
+        </div>
+    </div>
+
+
+    <div id="contact" class="app-contact">
+        <div class="app-contact-holder">
+            <div>
+                <h2><b>{{ .Profile.Name }}</b></h2>
+                <h4>{{ .Profile.Phone }}</h4>
+                <p>{{ .Profile.Profession }}</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="web/scripts/index.js"></script>
+
+</body>
+
+</html>
